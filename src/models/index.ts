@@ -4,7 +4,7 @@ import { Episode } from "./Episode";
 import { User } from "./User";
 
 // Uma categoria vai ter muitas cursos
-Category.hasMany(Course)
+Category.hasMany(Course, { as: 'courses' })
 
 // Curso pertence apenas a uma categoria.
 // Curso tem muitos episodes
