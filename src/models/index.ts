@@ -9,7 +9,7 @@ Category.hasMany(Course, { as: 'courses' })
 // Curso pertence apenas a uma categoria.
 // Curso tem muitos episodes
 Course.belongsTo(Category)
-Course.hasMany(Episode) // Episodes -> Forma padrão que cria esse nome
+Course.hasMany(Episode, { as: 'episodes'}) // Episodes -> Forma padrão que cria esse nome
 
 // Episodio está ligado a curso
 Episode.belongsTo(Course)
